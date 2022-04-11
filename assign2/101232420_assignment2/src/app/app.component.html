@@ -1,0 +1,15 @@
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+
+    <div class="container">
+
+        <ul class="nav navbar-nav" routerLinkActive="active">
+            <li class="nav-item"><a class="nav-link" routerLink="login">Login</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="users">Register</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="listingList">Listings</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="bookings">Bookings</a></li>
+            <button (click)="logout()">Logout</button>
+        </ul>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,15 @@
+<p>listing-list works!</p>
+<div >
+  
+    <div *ngIf="loading">Loading...</div>
+    <div *ngIf="error">Error :(</div>
+    <div *ngIf="listings">
+        <div *ngFor="let listing of listings">
+            <p>{{listing.listingId}}</p>
+            <p>{{listing.listingTitle}}</p>
+            <button (click)="makeBooking(listing.listingId)">Make Booking</button>
+        </div> 
+           
+    </div>
+    <button *ngIf="user.type=='admin'" (click)="makeListing()">Make new Listing</button>
+  </div>

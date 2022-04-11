@@ -1,0 +1,26 @@
+<p>login works!</p>
+<p>Register Page!</p>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <p>
+      <label for="email">email </label>
+      <input type="text" id="email" name="email" formControlName="email">
+    </p>
+    <p>
+        <label for="password">password </label>
+        <input type="text" id="password" name="password" formControlName="password">
+      </p>
+    
+    <p>
+      <button type="submit" >Submit</button>
+    </p>
+
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error">Error :(</div>
+<div *ngIf="users">
+    <div *ngFor="let user of users">
+        <p>{{user.email}}</p>
+    </div>    
+</div>
+

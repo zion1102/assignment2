@@ -1,0 +1,32 @@
+<p>makebooking works!</p>
+
+
+<div >
+    <h1>Add Listing</h1>
+  <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+  
+   
+  
+    <p>
+      <label for="bookingId">bookingId </label>
+      <input type="text" id="bookingId" name="bookingId" formControlName="bookingId">
+    </p>
+  
+    <p>
+      <label for="bookingStart">bookingStart </label>
+      <input type="text" id="bookingStart" name="bookingStart" formControlName="bookingStart">
+    </p>
+  
+    <p>
+      <label for="bookingEnd">bookingEnd </label>
+      <input type="text" id="bookingEnd" name="bookingEnd" formControlName="bookingEnd">
+    </p>
+  
+   
+  
+    
+    <p>
+      <button type="submit" >Submit</button>
+    </p>
+  </form>
+  </div>

@@ -1,0 +1,56 @@
+
+
+<div *ngIf="user.type =='admin'">
+  <h1>Add Listing</h1>
+<form [formGroup]="listingForm" (ngSubmit)="onSubmit()">
+
+  <p>
+    <label for="listingId">id </label>
+    <input type="text" id="listingId" name="listingId" formControlName="listingId">
+  </p>
+
+  <p>
+    <label for="listingTitle">listingTitle </label>
+    <input type="text" id="listingTitle" name="listingTitle" formControlName="listingTitle">
+  </p>
+
+  <p>
+    <label for="description">description </label>
+    <input type="text" id="description" name="description" formControlName="description">
+  </p>
+
+  <p>
+    <label for="street">street </label>
+    <input type="text" id="street" name="street" formControlName="street">
+  </p>
+
+  <p>
+    <label for="city">city </label>
+    <input type="text" id="city" name="city" formControlName="city">
+  </p>
+  <p>
+    <label for="postalCode">postalCode </label>
+    <input type="text" id="postalCode" name="postalCode" formControlName="postalCode">
+  </p>
+  <p>
+    <label for="price">price </label>
+    <input type="number" id="price" name="price" formControlName="price">
+  </p>
+
+  
+  <p>
+    <button type="submit" >Submit</button>
+  </p>
+</form>
+</div>
+
+<div *ngIf="user.type =='customer'">
+  
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="error">Error :(</div>
+  <div *ngIf="listings">
+      <div *ngFor="let listing of listings">
+          <p>{{listing.listingTitle}}</p>
+      </div>    
+  </div>
+</div>
